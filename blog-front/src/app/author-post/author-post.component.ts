@@ -24,13 +24,13 @@ export class AuthorPostComponent implements OnInit {
   public submit(): void {
     this.processing = this.submitted = true;
 
-    console.log("submitting blog post: " + JSON.stringify(this.post));
+    //console.log("submitting blog post: " + JSON.stringify(this.post));
 
     this.postService.CreatePost(this.post).subscribe(
       // response => console.log('response on new post: ' + JSON.stringify(response))
       response => {
         // Handle each observable response
-        console.log("result: " + response);
+        //console.log("result: " + response);
         this.processing = false;
       },
       error => {
